@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
-
+/* import { useData } from "../../contexts/DataContext"; */
 import "./style.scss";
 
+
+
+
 const ModalEvent = ({ event }) => (
+ /* const { data } = useData();
+ const lastevent = data.sort((a,b) => new Date(b.date) - new Date(a.date)); */
     <div className="ModalEvent">
       <div className="ModalEvent__imageContainer">
         <img
@@ -30,7 +35,7 @@ const ModalEvent = ({ event }) => (
         ))}
       </div>
     </div>
-  );
+);
 
 ModalEvent.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types

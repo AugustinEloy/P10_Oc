@@ -16,10 +16,11 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue); /* changement du onchange qui etait vide */
     setValue(newValue);
-    setCollapsed(newValue);
+    setCollapsed(true); /* changement par true car newvalue est la valeur du selecteur non un etat,(et setcollapsed me sert a replie le collaspe */
   };
+  
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
