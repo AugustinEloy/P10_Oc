@@ -30,13 +30,19 @@ export const DataProvider = ({ children }) => {
     if (data) return;
     getData();
   });
-  
+  const getLatestEvent = () => 
+    data && data.events 
+      ? data.events.reduce((latest, event) => 
+          new Date(event.date) > new Date(latest.date) ? event : latest
+        ) 
+      : null; 
   return (
     <DataContext.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
       value={{
         data,
         error,
+        last: getLatestEvent(),
       }}
     >
       {children}

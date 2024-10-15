@@ -20,7 +20,7 @@ const Slider = () => {
       5000
     );
    
-  }; /* j'ai rajouter +1  regarder au niveau des entrée pour faire de  meme ou essayer un .slice a regarder */
+  }; /* j'ai rajouter +1  regarder au niveau des mois pour faire de  meme ou essayer un .slice a regarder */
   useEffect(() => {
     nextCard();
   });
